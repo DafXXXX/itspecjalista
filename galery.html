@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>galery</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #333;
+        }
+
+        div {
+            display: block;
+            position: relative;
+        }
+
+        .rama {
+            width: 800px;
+            margin: 5% auto;
+            padding: 0;
+            border: 5px solid #c7c7c7;
+            box-shadow: 0px 0px 30px white;
+        }
+
+        .mini {
+            width: 200px;
+            left: 0;
+            top: 0;
+            padding: 0;
+            float: left;
+        }
+
+        .m {
+            cursor: pointer;
+            background-size:cover;
+
+            transform: scale(1);
+        }
+        .m:hover {
+            transition: 100ms;
+            transform: scale(1.01);
+            opacity: 70%;
+        }
+
+        .obraz {
+            background-image: url("cameleon_500.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 500px;
+            width: 700px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="rama">
+    <div class="mini">
+        <img class="m" src="200.png"
+             onmouseover="document.getElementById('big_picture').style.backgroundImage = 'url(500.png)';">
+        <img class="m" src="l200.png"
+             onmouseover="document.getElementById('big_picture').style.backgroundImage = 'url(l500.png)';">
+        <img class="m" src="cameleon_500.png"
+             onmouseover="document.getElementById('big_picture').style.backgroundImage = 'url(cameleon_500.png)';">
+    </div>
+
+    <p></p>
+
+    <div class="obraz" id="big_picture"> </div>
+</div>
+
+</body>
+</html>
